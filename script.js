@@ -1,5 +1,5 @@
 // voeg knop toe om van leur te verander, voeg geluid toe met muntje
-var slimeSprites = [
+var slimeSheet = [
     { x: 0, y: 0, width: 80, height: 80 },
     { x: 80, y: 0, width: 80, height: 80 },
     { x: 160, y: 0, width: 80, height: 80 },
@@ -10,10 +10,10 @@ var currentImageIndex = 0;
 function drawPlayer() {
     ctx.drawImage(
         spriteSheet,
-        slimeSprites[currentImageIndex].x,
-        slimeSprites[currentImageIndex].y,
-        slimeSprites[currentImageIndex].width,
-        slimeSprites[currentImageIndex].height,
+        slimeSheet[currentImageIndex].x,
+        slimeSheet[currentImageIndex].y,
+        slimeSheet[currentImageIndex].width,
+        slimeSheet[currentImageIndex].height,
         x,
         y,
         50,
@@ -45,13 +45,13 @@ var dy = 0;
 var jumping = false;
 
 var platformImg = new Image();
-platformImg.src = "inleiding_programmeren/img/platform.png";
+platformImg.src = "./img/platform.png";
 
 var signImg = new Image();
-signImg.src = "inleiding_programmeren/img/sign.png";
+signImg.src = "./img/sign.png";
 
 var coinImg = new Image();
-coinImg.src = "inleiding_programmeren/img/coin.png";
+coinImg.src = "./img/coin.png";
 
 var coin = {
 	x: 500,
@@ -70,7 +70,7 @@ var spriteY = 0;
 var frameCount = 0;
 
 var spriteSheet = new Image();
-spriteSheet.src = "inleiding_programmeren/img/slimey.png";
+spriteSheet.src = "./img/slimey.png";
 
 
 var coinLocations = [
