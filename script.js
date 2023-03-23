@@ -87,7 +87,7 @@ var coinLocations = [
 	{ x: 175, y: canvas.height - 715, width: 100, height: 80 },
 	{ x: 500, y: canvas.height - 840, width: 100, height: 80 },
 ]
-var coinPickUp = new Audio("/sounds/sonic-ring-sound.mp3");
+var coinPickUp = new Audio("./sounds/sonic-ring-sound.mp3");
 
 var score = 0;
 
