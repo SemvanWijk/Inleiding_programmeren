@@ -1,5 +1,5 @@
 // voeg knop toe om van leur te verander, voeg geluid toe met muntje
-var playerImages = [
+var slimeSprites = [
     { x: 0, y: 0, width: 80, height: 80 },
     { x: 80, y: 0, width: 80, height: 80 },
     { x: 160, y: 0, width: 80, height: 80 },
@@ -10,10 +10,10 @@ var currentImageIndex = 0;
 function drawPlayer() {
     ctx.drawImage(
         spriteSheet,
-        playerImages[currentImageIndex].x,
-        playerImages[currentImageIndex].y,
-        playerImages[currentImageIndex].width,
-        playerImages[currentImageIndex].height,
+        slimeSprites[currentImageIndex].x,
+        slimeSprites[currentImageIndex].y,
+        slimeSprites[currentImageIndex].width,
+        slimeSprites[currentImageIndex].height,
         x,
         y,
         50,
