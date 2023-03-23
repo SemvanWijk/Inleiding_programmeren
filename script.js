@@ -45,13 +45,13 @@ var dy = 0;
 var jumping = false;
 
 var platformImg = new Image();
-platformImg.src = "/img/platform.png";
+platformImg.src = "./img/platform.png";
 
 var signImg = new Image();
-signImg.src = "/img/sign.png";
+signImg.src = "./img/sign.png";
 
 var coinImg = new Image();
-coinImg.src = "/img/coin.png";
+coinImg.src = "./img/coin.png";
 
 var coin = {
 	x: 500,
@@ -70,7 +70,7 @@ var spriteY = 0;
 var frameCount = 0;
 
 var spriteSheet = new Image();
-spriteSheet.src = "/img/slimey.png";
+spriteSheet.src = "./img/slimey.png";
 
 
 var coinLocations = [
