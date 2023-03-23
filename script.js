@@ -45,7 +45,7 @@ var dy = 0;
 var jumping = false;
 
 var platformImg = new Image();
-platformImg.src = "Inleiding_programmeren/img/platform.png";
+platformImg.src = "./img/platform.png";
 
 var signImg = new Image();
 signImg.src = "./img/sign.png";
