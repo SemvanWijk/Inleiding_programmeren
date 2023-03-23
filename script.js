@@ -1,4 +1,4 @@
-// voeg knop toe om van leur te verander, voeg geluid toe met muntje
+// voeg knop toe om van kleur te verander
 var slimeSheet = [
     { x: 0, y: 0, width: 80, height: 80 },
     { x: 80, y: 0, width: 80, height: 80 },
