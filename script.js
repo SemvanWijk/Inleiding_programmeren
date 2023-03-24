@@ -1,31 +1,4 @@
 // voeg knop toe om van kleur te verander
-var slimeSheet = [
-    { x: 0, y: 0, width: 80, height: 80 },
-    { x: 80, y: 0, width: 80, height: 80 },
-    { x: 160, y: 0, width: 80, height: 80 },
-    // add more images as needed
-];
-var currentImageIndex = 0;
-
-function drawPlayer() {
-    ctx.drawImage(
-        spriteSheet,
-        slimeSheet[currentImageIndex].x,
-        slimeSheet[currentImageIndex].y,
-        slimeSheet[currentImageIndex].width,
-        slimeSheet[currentImageIndex].height,
-        x,
-        y,
-        50,
-        50
-    );
-}
-
-document.addEventListener("keydown", function(event) {
-    if (event.key === "s") {
-        currentImageIndex = (currentImageIndex + 1) % playerImages.length;
-    }
-});
 //einde 
 
 
@@ -60,17 +33,13 @@ var coin = {
 	height: 80
 };
 
+var slimeImages = [
+	"./img/blue.png",
+	"./img/green.png",
+	"./img/orange.png",
+];
 
-
-
-var spriteWidth = 50;
-var spriteHeight = 70;
-var spriteX = 0;
-var spriteY = 0;
-var frameCount = 0;
-
-var spriteSheet = new Image();
-spriteSheet.src = "./img/slimey.png";
+var slimeIndex = 0;
 
 
 var coinLocations = [
@@ -88,6 +57,7 @@ var coinLocations = [
 	{ x: 500, y: canvas.height - 840, width: 100, height: 80 },
 ]
 var coinPickUp = new Audio("./sounds/sonic-ring-sound.mp3");
+var changeImage = new Audio("./sounds/slick.mp3")
 
 var score = 0;
 
@@ -107,8 +77,11 @@ var platforms = [
 ];
 
 function drawPlayer() {
-    ctx.drawImage(spriteSheet, 0, 0, 80, 80, x, y, 50, 50);
+    var slimeImage = new Image();
+    slimeImage.src = slimeImages[slimeIndex];
+    ctx.drawImage(slimeImage, x, y, 60, 50);
 }
+
 
 
 function drawPlatform(platform) {
@@ -234,8 +207,12 @@ document.addEventListener("keydown", function (event) {
 		moveRight();
 	} else if (event.code === "Space") {
 		jump();
-	}
+	} else if (event.code === "ArrowDown") {
+        slimeIndex = (slimeIndex + 1) % slimeImages.length;
+		changeImage.play()
+    }
 });
+
 
 document.addEventListener("keyup", function (event) {
 	if (event.code === "ArrowLeft" || event.code === "ArrowRight") {
