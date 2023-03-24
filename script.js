@@ -223,4 +223,5 @@ document.addEventListener("keyup", function (event) {
 	}
 });
 
+//roept de draw functie elk frame aan
 requestAnimationFrame(draw);
